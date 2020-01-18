@@ -26,7 +26,7 @@
             <h6>Brand: {{ $data['data']['brand']['name'] }}</h6>
             <h6>Buying Price: {{ $data['data']['buy_price'] }} tk</h6>
             <h6>Selling Price: {{ $data['data']['sell_price'] }} tk</h6>
-            <h6>Status: <span id="status-bg-success">{{ $data['data']['status'] ===1 ? 'Active' : 'Inactive' }}</span>
+            <h6>Status: <span id="status-bg-success">{{ $data['data']['status'] === '1' ? 'Active' : 'Inactive' }}</span>
             </h6>
             <h6>Description</h6>
             {!! $data['data']['description'] !!} <br>

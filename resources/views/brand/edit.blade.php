@@ -43,8 +43,8 @@
                             </div>
                         <select name="status" id="status" class="form-control @error('status') is-invalid @enderror">
                             <option value="" disabled>Select option</option>
-                            <option value="1" @if($data['brand']['status']===1) selected @endif>Active</option>
-                            <option value="2" @if($data['brand']['status']===2) selected @endif>Inactive</option>
+                            <option value="1" @if($data['brand']['status']==='1') selected @endif>Active</option>
+                            <option value="2" @if($data['brand']['status']==='2') selected @endif>Inactive</option>
                         </select>
                         </div>
                         @error('status')

@@ -22,7 +22,7 @@
         </div>
         <div class="card-body">
             <h6>Name: {{ $data['brand']['name'] }}</h6>
-            <h6>Status: {{ $data['brand']['status'] === 1 ? 'Active' : 'Inactive' }}</h6>
+            <h6>Status: {{ $data['brand']['status'] === '1' ? 'Active' : 'Inactive' }}</h6>
             <h6>Description</h6>
             {!! $data['brand']['description'] !!}<br><br>
             @if($user_type == 'manager')
