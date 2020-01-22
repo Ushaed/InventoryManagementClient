@@ -43,7 +43,7 @@
                     <th>Buying Price</th>
                     <th>Selling Price</th>
                     <th>Status</th>
-                    <th>Action</th>
+                    <th style="width: 18%">Action</th>
                 </tr>
                 </thead>
                 <tbody>
