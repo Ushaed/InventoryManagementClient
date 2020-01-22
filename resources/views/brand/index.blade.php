@@ -35,9 +35,9 @@
                     <tr>
                         <td>{{ ++$key }}</td>
                         <td>{{ $value['name'] }}</td>
-                        @if($value['status'] === 1)
+                        @if($value['status'] === '1')
                             <td><span id="status-bg-success">Active</span></td>
-                        @elseif($value['status'] == 2)
+                        @elseif($value['status'] === '2')
                             <td><span id="status-bg-danger">Inactive</span></td>
                         @endif
                         <td style="width: 17%"><a href="{{ route('brands.show', $value['id']) }} "

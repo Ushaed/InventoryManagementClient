@@ -17,7 +17,7 @@ class CheckAuthClient
         $data = [];
         $data['accessToken'] = $request->cookie('accessToken');
         $data['userId'] = $request->cookie('userId');
-        $data['base_uri'] = 'http://localhost/laravelInventoryApi/public/api/v1/';
+        $data['base_uri'] = 'http://ushaed.inventoryapi.rmwebdev.com/api/v1/';
         $data['CustomHeaders'] = [
             'Accept' => 'Application/json',
             'Authorization' => $data['accessToken'],

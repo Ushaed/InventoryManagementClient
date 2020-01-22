@@ -16,7 +16,7 @@ class AuthController extends Controller
 
     public function login(Request $request)
     {
-        $client = new Client(['base_uri' => 'http://localhost/laravelInventoryApi/public/api/v1/']);
+        $client = new Client(['base_uri' => 'http://ushaed.inventoryapi.rmwebdev.com/api/v1/']);
         try {
             $request = $client->request('POST', 'login', [
                 'form_params' => [

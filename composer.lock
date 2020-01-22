@@ -5,6 +5,7 @@
         "This file is @generated automatically"
     ],
     "content-hash": "888c91c683169f7b48509dcf962a4fc6",
+    "content-hash": "88f8d564dc1689b25ef47f9de9d41a4a",
     "packages": [
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -3032,6 +3033,16 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/symfony/translation/zipball/f7669f48a9633bf8139bc026c755e894b7206677",
                 "reference": "f7669f48a9633bf8139bc026c755e894b7206677",
+            "version": "v4.3.8",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/translation.git",
+                "reference": "bbce239b35b0cd47bd75848b23e969f17dd970e7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/translation/zipball/bbce239b35b0cd47bd75848b23e969f17dd970e7",
+                "reference": "bbce239b35b0cd47bd75848b23e969f17dd970e7",
                 "shasum": ""
             },
             "require": {
@@ -3095,6 +3106,7 @@
             "description": "Symfony Translation Component",
             "homepage": "https://symfony.com",
             "time": "2019-12-12T12:53:52+00:00"
+        }
         },
         {
             "name": "symfony/translation-contracts",

@@ -55,9 +55,9 @@
                         <td>{{ $value['brand']['name'] }}</td>
                         <td>{{ $value['buy_price'] }} tk</td>
                         <td>{{ $value['sell_price'] }} tk</td>
-                        @if($value['status'] === 1)
+                        @if($value['status'] === '1')
                             <td><span id="status-bg-success">Active</span></td>
-                        @elseif($value['status'] == 2)
+                        @elseif($value['status'] === '2')
                             <td><span id="status-bg-danger">Inactive</span></td>
                         @endif
                         <td><a href="{{ route('products.show', $value['id']) }} " class="btn btn-default"><i
