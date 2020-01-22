@@ -23,16 +23,16 @@
                     <form action="">
                         <div class="form-row">
                             <div class="form-group mr-1">
-                                <select class="form-control float-right" name="month" required>
-                                    @for ($i = 1 ; $i <= $current_month; $i++)
-                                        <option value="{{ $i }}" @if($i == $current_month) selected @endif>{{ date('F', mktime(null, null, null, $i)) }}</option>
+                                <select class="form-control float-right" id="select_year" name="year" required onchange="twelve_months(this);">
+                                    @for ($i = $start_year ; $i <= $current_year; $i++)
+                                        <option value="{{ $i }}" @if($i == $current_year) selected @endif>{{ $i }}</option>
                                     @endfor
                                 </select>
                             </div>
                             <div class="form-group mr-1">
-                                <select class="form-control float-right" name="year" required>
-                                    @for ($i = $start_year ; $i <= $current_year; $i++)
-                                        <option value="{{ $i }}" @if($i == $current_year) selected @endif>{{ $i }}</option>
+                                <select class="form-control float-right" id="select_month" name="month" required>
+                                    @for ($i = 1 ; $i <= $current_month; $i++)
+                                        <option value="{{ $i }}" @if($i == $current_month) selected @endif>{{ date('F', mktime(null, null, null, $i)) }}</option>
                                     @endfor
                                 </select>
                             </div>
@@ -155,4 +155,33 @@
             </table>
         </div>
     </div>
+    <script>
+        function twelve_months(selectObject) {
+            $('#select_month').html('');
+            let selected_year = selectObject.value;
+            let current_year = new Date().getFullYear();
+            console.log(current_year);
+            console.log(selected_year);
+            let html = '';
+            if (selected_year !== current_year){
+                html += '<option value="1">January</option>' +
+                    '<option value="2">Fabruary</option>' +
+                    '<option value="3">March</option>' +
+                    '<option value="4">April</option>' +
+                    '<option value="5">May</option>' +
+                    '<option value="6">June</option>' +
+                    '<option value="7">July</option>' +
+                    '<option value="8">August</option>' +
+                    '<option value="9">September</option>' +
+                    '<option value="10">October</option>' +
+                    '<option value="11">November</option>' +
+                    '<option value="12">December</option>';
+            }else{
+                $('#select_month').html('');
+                html +='<option value="12">Ushaed</option>';
+            }
+            $('#select_month').html(html);
+        }
+    </script>
 @stop
+
